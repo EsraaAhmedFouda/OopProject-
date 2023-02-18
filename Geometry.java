@@ -1,3 +1,4 @@
+
 package project;
 
 import MyExep.UnValidNumber;
@@ -5,11 +6,6 @@ import MyExep.negativeValueException;
 
 public class Geometry {
 
-    private double length;
-    private double width;
-    private double radius;
-    private double base;
-    private double height;
 
     public double RectangleArea(double length, double width) {
         double Area = length * width;
