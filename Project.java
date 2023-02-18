@@ -15,34 +15,39 @@ public class Project {
         PrintWriter pr = new PrintWriter(fOS);
         do {
 pr.print("MENUE /n 1. circle area /n 2.rectangle area /n 3.square area /n 4.quite /n Enter Your Choice");
+     if (sc.hasNext()){
             int num = sc.nextInt();
             try {
                 if (Geometry.checkNum(num)) {
-                    switch (num) {
-                        case 1: {
+                    if (num ==1) {
+                   if (sc.hasNext()){
                             double radius = sc.nextDouble();
                             pr.print(Geometry.circleArea(radius));
-                            break;
+                            }
                         }
-                        case 2: {
+                  else if (num ==2) 
+                        {
+if (sc.hasNext()){
                             double length = sc.nextDouble();
                             double width = sc.nextDouble();
                             pr.print(Geometry.RectangleArea(length, width));
-                            break;
+                            
                         }
-                        case 3: {
+}
+                        else if (num ==3)  {
+                 if (sc.hasNext()){
                             double base = sc.nextDouble();
                             double height = sc.nextDouble();
                             pr.print(Geometry.TraingleArea(base, height));
 
-                            break;
+                            
                         }
                     }
-                    if (num == 4) {
+                   else if (num == 4) {
                         pr.print("Thanks ,You are welcome");
                         break;
-                    }
-                }
+                    }}
+                
             } catch (UnValidNumber un) {
                pr.print("Try again");
             }
