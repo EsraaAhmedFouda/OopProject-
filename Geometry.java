@@ -7,7 +7,7 @@ import MyExep.negativeValueException;
 public class Geometry {
 
 
-    public double RectangleArea(double length, double width) {
+    public static double RectangleArea(double length, double width) {
         double Area = length * width;
         try {
             validArea(Area);
@@ -18,7 +18,7 @@ public class Geometry {
         return 0;
     }
 
-    public double circleArea(double radius) {
+    public static double circleArea(double radius) {
         double Area = Math.PI * Math.pow(radius, 2);
         try {
             validArea(Area);
@@ -29,7 +29,7 @@ public class Geometry {
         return 0;
     }
 
-    public double TraingleArea(double area, double height) {
+    public static double TraingleArea(double area, double height) {
         double Area = 0.5 * base* height;
         try {
             validArea(Area);
@@ -40,7 +40,7 @@ public class Geometry {
         return 0;
     }
 
-    public void validArea(double area) throws negativeValueException {
+    public static void validArea(double area) throws negativeValueException {
         if (area < 0) {
             throw new negativeValueException("This Area not Valid");
         } else {
@@ -48,7 +48,7 @@ public class Geometry {
         }
     }
 
-    public boolean checkNum(int num) throws UnValidNumber {
+    public static boolean checkNum(int num) throws UnValidNumber {
         if (num >= 1 && num <= 4) {
             return true;
         } else {
