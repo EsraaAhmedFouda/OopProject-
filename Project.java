@@ -8,31 +8,32 @@ import MyExep.negativeValueException;
 public class Project {
 
     public static void main(String[] args) throws FileNotFoundException, negativeValueException, UnValidNumber {
-        Geometry g = new Geometry();
+        
         File f = new File("data.txt");
         Scanner sc = new Scanner(f);
         FileOutputStream fOS = new FileOutputStream("out.txt");
         PrintWriter pr = new PrintWriter(fOS);
         do {
+pr.print("MENUE /n 1. circle area /n 2.rectangle area /n 3.square area /n 4.quite /n Enter Your Choice");
             int num = sc.nextInt();
             try {
-                if (g.checkNum(num)) {
+                if (Geometry.checkNum(num)) {
                     switch (num) {
                         case 1: {
                             double radius = sc.nextDouble();
-                            pr.print(g.circleArea(radius));
+                            pr.print(Geometry.circleArea(radius));
                             break;
                         }
                         case 2: {
                             double length = sc.nextDouble();
                             double width = sc.nextDouble();
-                            pr.print(g.RectangleArea(length, width));
+                            pr.print(Geometry.RectangleArea(length, width));
                             break;
                         }
                         case 3: {
                             double base = sc.nextDouble();
                             double height = sc.nextDouble();
-                            pr.print(g.TraingleArea(base, height));
+                            pr.print(Geometry.TraingleArea(base, height));
 
                             break;
                         }
