@@ -14,7 +14,7 @@ public class Project {
         FileOutputStream fOS = new FileOutputStream("out.txt");
         PrintWriter pr = new PrintWriter(fOS);
         do {
-pr.print("MENUE /n 1. circle area /n 2.rectangle area /n 3.square area /n 4.quite /n Enter Your Choice");
+pr.print("MENUE \n 1. circle area \n 2.rectangle area \n 3.square area \n 4.quite \n Enter Your Choice");
      if (sc.hasNext()){
             int num = sc.nextInt();
             try {
@@ -45,13 +45,14 @@ if (sc.hasNext()){
                     }
                    else if (num == 4) {
                         pr.print("Thanks ,You are welcome");
+pr.close();
                         break;
                     }}
                 
             } catch (UnValidNumber un) {
                pr.print("Try again");
             }
-            pr.close();
+            
         } while (true);
 
     }
